@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">🌾 Farm Manager</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="farm.html">My Farm</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Smart Farm Management System</h1>
+
+        <p>
+            Manage your crops, fields, livestock, expenses,
+            harvest and sales from one place.
+        </p>
+
+        <a href="farm.html" class="main-btn">
+            🌾 Enter My Farm
+        </a>
+
+    </div>
+
+</section>
+
+<section class="features">
+
+    <h2>Farm Management Features</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <span>🌱</span>
+            <h3>Crop Management</h3>
+            <p>Manage all your crops and farming activities.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>🚜</span>
+            <h3>Field Management</h3>
+            <p>Keep track of fields and their conditions.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>🐄</span>
+            <h3>Livestock</h3>
+            <p>Manage cattle and other farm animals.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>💰</span>
+            <h3>Expenses</h3>
+            <p>Track your farming expenses.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Farm Management System</p>
+</footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Farm</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">
+        🌾 My Farm
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="farm.html">Dashboard</a>
+    </nav>
+
+</header>
+
+
+<section class="dashboard">
+
+    <div class="dashboard-title">
+
+        <div>
+            <h1>🌱 Welcome to My Farm</h1>
+
+            <p>
+                Manage your complete farm from this dashboard.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>🌱 Crops</h3>
+            <strong id="cropCount">0</strong>
+            <p>Total Crops</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>🚜 Fields</h3>
+            <strong id="fieldCount">0</strong>
+            <p>Total Fields</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>🐄 Livestock</h3>
+            <strong id="animalCount">0</strong>
+            <p>Total Animals</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>💰 Expenses</h3>
+            <strong id="expenseTotal">₹0</strong>
+            <p>Total Expenses</p>
+        </div>
+
+    </div>
+
+
+    <h2 class="section-title">
+        Farm Management
+    </h2>
+
+
+    <div class="farm-menu">
+
+        <a href="crops.html" class="farm-card">
+            <span>🌱</span>
+            <h2>Crops</h2>
+            <p>Manage your crops</p>
+        </a>
+
+        <a href="fields.html" class="farm-card">
+            <span>🚜</span>
+            <h2>Fields</h2>
+            <p>Manage farm fields</p>
+        </a>
+
+        <a href="livestock.html" class="farm-card">
+            <span>🐄</span>
+            <h2>Livestock</h2>
+            <p>Manage animals</p>
+        </a>
+
+        <a href="expenses.html" class="farm-card">
+            <span>💰</span>
+            <h2>Expenses</h2>
+            <p>Track expenses</p>
+        </a>
+
+        <a href="harvest.html" class="farm-card">
+            <span>📦</span>
+            <h2>Harvest</h2>
+            <p>Manage harvest</p>
+        </a>
+
+        <a href="sales.html" class="farm-card">
+            <span>💵</span>
+            <h2>Sales</h2>
+            <p>Manage sales</p>
+        </a>
+
+        <a href="reports.html" class="farm-card">
+            <span>📊</span>
+            <h2>Reports</h2>
+            <p>View farm reports</p>
+        </a>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crop Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">🌱 Crop Management</div>
+
+    <nav>
+        <a href="farm.html">← Dashboard</a>
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+    <h1>🌱 Crop Management</h1>
+
+    <p>Add and manage your farm crops.</p>
+
+
+    <div class="form-box">
+
+        <input
+            type="text"
+            id="cropName"
+            placeholder="Crop name"
+        >
+
+        <input
+            type="text"
+            id="cropField"
+            placeholder="Field name"
+        >
+
+        <input
+            type="date"
+            id="cropDate"
+        >
+
+        <button onclick="addCrop()">
+            Add Crop
+        </button>
+
+    </div>
+
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Crop</th>
+                    <th>Field</th>
+                    <th>Sowing Date</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="cropTable"></tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Field Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">🚜 Field Management</div>
+
+    <nav>
+        <a href="farm.html">← Dashboard</a>
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+    <h1>🚜 Field Management</h1>
+
+    <p>Manage your farm fields.</p>
+
+
+    <div class="form-box">
+
+        <input
+            type="text"
+            id="fieldName"
+            placeholder="Field name"
+        >
+
+        <input
+            type="number"
+            id="fieldSize"
+            placeholder="Size in acres"
+        >
+
+        <input
+            type="text"
+            id="fieldCrop"
+            placeholder="Crop"
+        >
+
+        <button onclick="addField()">
+            Add Field
+        </button>
+
+    </div>
+
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Field</th>
+                    <th>Size</th>
+                    <th>Crop</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="fieldTable"></tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Livestock Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">🐄 Livestock</div>
+
+    <nav>
+        <a href="farm.html">← Dashboard</a>
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+    <h1>🐄 Livestock Management</h1>
+
+    <p>Manage your farm animals.</p>
+
+
+    <div class="form-box">
+
+        <input
+            type="text"
+            id="animalType"
+            placeholder="Animal type"
+        >
+
+        <input
+            type="number"
+            id="animalCountInput"
+            placeholder="Number of animals"
+        >
+
+        <button onclick="addAnimal()">
+            Add Livestock
+        </button>
+
+    </div>
+
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Animal</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="animalTable"></tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Farm Expenses</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">💰 Farm Expenses</div>
+
+    <nav>
+        <a href="farm.html">← Dashboard</a>
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+    <h1>💰 Expense Management</h1>
+
+    <p>Track all your farming expenses.</p>
+
+
+    <div class="form-box">
+
+        <input
+            type="text"
+            id="expenseName"
+            placeholder="Expense name"
+        >
+
+        <input
+            type="number"
+            id="expenseAmount"
+            placeholder="Amount"
+        >
+
+        <button onclick="addExpense()">
+            Add Expense
+        </button>
+
+    </div>
+
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Expense</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="expenseTable"></tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Harvest Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">📦 Harvest</div>
+
+    <nav>
+        <a href="farm.html">← Dashboard</a>
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+    <h1>📦 Harvest Management</h1>
+
+    <p>Record your harvested crops.</p>
+
+
+    <div class="form-box">
+
+        <input
+            type="text"
+            id="harvestCrop"
+            placeholder="Crop name"
+        >
+
+        <input
+            type="number"
+            id="harvestQuantity"
+            placeholder="Quantity in kg"
+        >
+
+        <button onclick="addHarvest()">
+            Add Harvest
+        </button>
+
+    </div>
+
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Crop</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="harvestTable"></tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Farm Sales</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">💵 Farm Sales</div>
+
+    <nav>
+        <a href="farm.html">← Dashboard</a>
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+    <h1>💵 Sales Management</h1>
+
+    <p>Record your farm sales.</p>
+
+
+    <div class="form-box">
+
+        <input
+            type="text"
+            id="saleCrop"
+            placeholder="Crop name"
+        >
+
+        <input
+            type="number"
+            id="saleQuantity"
+            placeholder="Quantity"
+        >
+
+        <input
+            type="number"
+            id="saleAmount"
+            placeholder="Sale amount"
+        >
+
+        <button onclick="addSale()">
+            Add Sale
+        </button>
+
+    </div>
+
+
+    <div class="table-box">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Crop</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="saleTable"></tbody>
+
+        </table>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Farm Reports</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo">📊 Farm Reports</div>
+
+    <nav>
+        <a href="farm.html">← Dashboard</a>
+    </nav>
+
+</header>
+
+
+<main class="page">
+
+    <h1>📊 Farm Reports</h1>
+
+    <p>Overview of your farm.</p>
+
+
+    <div class="report-grid">
+
+        <div class="report-card">
+
+            <h2>🌱 Crops</h2>
+
+            <strong id="reportCrops">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="report-card">
+
+            <h2>🚜 Fields</h2>
+
+            <strong id="reportFields">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="report-card">
+
+            <h2>🐄 Animals</h2>
+
+            <strong id="reportAnimals">
+                0
+            </strong>
+
+        </div>
+
+
+        <div class="report-card">
+
+            <h2>💰 Expenses</h2>
+
+            <strong id="reportExpenses">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="report-card">
+
+            <h2>💵 Sales</h2>
+
+            <strong id="reportSales">
+                ₹0
+            </strong>
+
+        </div>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
